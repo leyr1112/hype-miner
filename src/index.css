@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-polymarket-bg text-polymarket-text font-sans;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  * {
+    @apply border-polymarket-border;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-polymarket-card border border-polymarket-border rounded-lg p-6;
+  }
+
+  .btn-primary {
+    @apply bg-polymarket-accent hover:bg-polymarket-accent-hover text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-polymarket-card border border-polymarket-border hover:bg-polymarket-border text-polymarket-text font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input {
+    @apply bg-polymarket-card border border-polymarket-border rounded-lg px-4 py-3 text-polymarket-text placeholder-polymarket-text-secondary focus:outline-none focus:ring-2 focus:ring-polymarket-accent focus:border-transparent;
+  }
+}
